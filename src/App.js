@@ -26,18 +26,20 @@ function App() {
         </label>
         <input value={question} onChange={e => setQuestion(e.target.value)}></input>
         <div className="dice-container">
-          <div className="zodiac-dice">Zodiac</div>
-          <div className="zodiac-dice">Planet</div>
-          <div className="zodiac-dice">House</div>
+          <div className="zodiac-dice">Planet Dice</div>
+          <div className="zodiac-dice">Zodiac Dice</div>
+          <div className="zodiac-dice">House Dice</div>
         </div>
         <button onSubmit={handleDiceRoll()}>Roll the dice</button>
       </section>
       <section className="horoscope-template">
         <h3>{question}</h3>
-        <p>There once was a <span>______</span> that lived in the sky and fell in love with a <span>______</span>. He decided he loved it so much he wanted to live there and build his own <span>______</span>.
+        <p>The planet <span>______</span> in the sign of <span>______</span> in the <span>______</span> house means yada yada yas queen. Know what I mean?
         </p>
+        {/* <button>Save horoscope</button> */}
       </section>
-      <section className="horoscope-log">
+      <button>Reset</button>
+      {/* <section className="horoscope-log">
         <div className="horoscope-entry">
           <h4>(entry 1)</h4>
         </div>
@@ -47,7 +49,7 @@ function App() {
         <div className="horoscope-entry">
         <h4>(entry 3)</h4>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
