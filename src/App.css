@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+.dice-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.zodiac-dice {
+  border: solid black 1px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.horoscope-template {
+  border: solid black 1px;
+  margin: 50px;
+  padding: 10px;
+}
+
+.horoscope-log {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid black 1px;
+  margin: 50px;
+}
+
+.horoscope-entry {
+  border: solid black 1px;
+  margin: 10px;
+  padding: 15px;
+}
