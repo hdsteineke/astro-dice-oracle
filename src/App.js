@@ -1,21 +1,20 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import PlanetDie from './Die/PlanetDie';
 
 function App() {
   const [question, setQuestion] = useState('');
-  const [zodiacDie, setZodiacDie] = useState('');
-  const [planetDie, setPlanetDie] = useState('');
-  const [houseDie, setHouseDie] = useState('');
-  const [horoscope, setHoroscope] = useState('');
+  const [planetDie, setPlanetDie] = useState(1);
 
-  async function handleDiceRoll(e) {
-    e.preventDefault();
-    setQuestion(e.target.value);
-  }
+  // useEffect(() => {
+  //   setPlanetDie(planetDie);
+  // }, [])
 
-  async function handleSaveHoroscope() {
-
-  }
+  // function handleDiceRoll() {
+  //   const result = Math.floor(Math.random() * 12);
+  //   console.log('result', result);
+  //   setPlanetDie(result);
+  // }
 
   return (
     <div className="App">
@@ -26,30 +25,15 @@ function App() {
         </label>
         <input value={question} onChange={e => setQuestion(e.target.value)}></input>
         <div className="dice-container">
-          <div className="zodiac-dice">Planet Dice</div>
-          <div className="zodiac-dice">Zodiac Dice</div>
-          <div className="zodiac-dice">House Dice</div>
+        <div className="zodiac-dice">{planetDie}</div>
         </div>
-        <button onSubmit={handleDiceRoll()}>Roll the dice</button>
+        <button onClick={ () => setPlanetDie(Math.floor(Math.random() * 12))}>Roll the dice</button>
       </section>
       <section className="horoscope-template">
         <h3>{question}</h3>
-        <p>The planet <span>______</span> in the sign of <span>______</span> in the <span>______</span> house means yada yada yas queen. Know what I mean?
-        </p>
-        {/* <button>Save horoscope</button> */}
+        
       </section>
       <button>Reset</button>
-      {/* <section className="horoscope-log">
-        <div className="horoscope-entry">
-          <h4>(entry 1)</h4>
-        </div>
-        <div className="horoscope-entry">
-          <h4>(entry 2)</h4>
-        </div>
-        <div className="horoscope-entry">
-        <h4>(entry 3)</h4>
-        </div>
-      </section> */}
     </div>
   );
 }
