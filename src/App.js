@@ -5,38 +5,53 @@ import PlanetDie from './Dice/PlanetDie';
 function App() {
   const [question, setQuestion] = useState('');
   const [planetDie, setPlanetDie] = useState('♂');
+  const [planetHoroscope, setPlanetHoroscope] = useState('');
   const [zodiacDie, setZodiacDie] = useState('♈︎');
   const [houseDie, setHouseDie] = useState(1);
 
 
   function handlePlanetDie() {
     let planetResult = Math.ceil(Math.random() * 12);
+    let planetText = ''
     if (planetResult === 1) {
-      planetResult = '♂'
+      planetResult = '♂';
+      planetText = 'Take action'
     } else if (planetResult === 2) {
-      planetResult = '♀'
+      planetResult = '♀';
+      planetText = 'Receive'
     } else if (planetResult === 3) {
-      planetResult = '☿'
+      planetResult = '☿';
+      planetText = 'Communicate';
     } else if (planetResult === 4) {
-      planetResult = '☽'
+      planetResult = '☽';
+      planetText = 'Rest';
     } else if (planetResult === 5) {
-      planetResult = '☉'
+      planetResult = '☉';
+      planetText = 'Awaken';
     } else if (planetResult === 6) {
-      planetResult = '☊'
+      planetResult = '☊';
+      planetText = 'Align';
     } else if (planetResult === 7) {
-      planetResult = '☋'
+      planetResult = '☋';
+      planetText = 'Realign';
     } else if (planetResult === 8) {
-      planetResult = '♇'
+      planetResult = '♇';
+      planetText = 'Release';
     } else if (planetResult === 9) {
-      planetResult = '♃'
+      planetResult = '♃';
+      planetText = 'Expand';
     } else if (planetResult === 10) {
-      planetResult = '♄'
+      planetResult = '♄';
+      planetText = 'Commit';
     } else if (planetResult === 11) {
-      planetResult = '♅'
+      planetResult = '♅';
+      planetText = 'Innovate';
     } else if (planetResult === 12) {
-      planetResult = '♆'
+      planetResult = '♆';
+      planetText = 'Dream';
     }
     setPlanetDie(planetResult);
+    setPlanetHoroscope(planetText);
   }
   function handleZodiacDie() {
     let zodiacResult = Math.ceil(Math.random() * 12);
@@ -95,6 +110,7 @@ function App() {
       </section>
       <section className="horoscope-template">
         <h3>{question}</h3>
+        <p>{planetHoroscope}</p>
         
       </section>
       <button>Reset</button>
