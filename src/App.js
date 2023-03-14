@@ -1,20 +1,41 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import PlanetDie from './Die/PlanetDie';
+import PlanetDie from './Dice/PlanetDie';
 
 function App() {
   const [question, setQuestion] = useState('');
   const [planetDie, setPlanetDie] = useState(1);
 
-  // useEffect(() => {
-  //   setPlanetDie(planetDie);
-  // }, [])
 
-  // function handleDiceRoll() {
-  //   const result = Math.floor(Math.random() * 12);
-  //   console.log('result', result);
-  //   setPlanetDie(result);
-  // }
+  function handlePlanetDieRoll() {
+    let result = Math.ceil(Math.random() * 12);
+    if (result === 1) {
+      result = '♂'
+    } else if (result === 2) {
+      result = '♀'
+    } else if (result === 3) {
+      result = '☿'
+    } else if (result === 4) {
+      result = '☽'
+    } else if (result === 5) {
+      result = '☉'
+    } else if (result === 6) {
+      result = '☊'
+    } else if (result === 7) {
+      result = '☋'
+    } else if (result === 8) {
+      result = '♇'
+    } else if (result === 9) {
+      result = '♃'
+    } else if (result === 10) {
+      result = '♄'
+    } else if (result === 11) {
+      result = '♅'
+    } else if (result === 12) {
+      result = '♆'
+    }
+    setPlanetDie(result);
+  }
 
   return (
     <div className="App">
@@ -25,9 +46,9 @@ function App() {
         </label>
         <input value={question} onChange={e => setQuestion(e.target.value)}></input>
         <div className="dice-container">
-        <div className="zodiac-dice">{planetDie}</div>
+          <div className="zodiac-dice">{planetDie}</div>
         </div>
-        <button onClick={ () => setPlanetDie(Math.floor(Math.random() * 12))}>Roll the dice</button>
+        <button onClick={() => handlePlanetDieRoll()}>Roll the dice</button>
       </section>
       <section className="horoscope-template">
         <h3>{question}</h3>
