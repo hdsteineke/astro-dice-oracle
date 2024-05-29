@@ -9,6 +9,7 @@ function App() {
   const [zodiacDie, setZodiacDie] = useState('♈︎');
   const [zodiacHoroscope, setZodiacHoroscope] = useState('');
   const [houseDie, setHouseDie] = useState(1);
+  const [houseHoroscope, setHouseHoroscope] = useState('');
   // const [horoscope, setHoroscope] = useState('');
 
 
@@ -101,7 +102,46 @@ function App() {
 
   function handleHouseDie() {
     let houseResult = Math.ceil(Math.random() * 12);
+    let houseText = '';
+    if (houseResult === 1) {
+      houseResult = 1;
+      houseText = 'Identity';
+    } else if (houseResult === 2) {
+      houseResult = 2;
+      houseText = 'Resources';
+    } else if (houseResult === 3) {
+      houseResult = 3;
+      houseText = 'Local Community';
+    } else if (houseResult === 4) {
+      houseResult = 4;
+      houseText = 'Sense of Belonging';
+    } else if (houseResult === 5) {
+      houseResult = 5;
+      houseText = 'Creativity';
+    } else if (houseResult === 6) {
+      houseResult = 6;
+      houseText = 'Routines';
+    } else if (houseResult === 7) {
+      houseResult = 7;
+      houseText = 'Partnerships + Agreements';
+    } else if (houseResult === 8) {
+      houseResult = 8;
+      houseText = 'Transformation';
+    } else if (houseResult === 9) {
+      houseResult = 9;
+      houseText = 'Higher Learning';
+    } else if (houseResult === 10) {
+      houseResult = 10;
+      houseText = 'Legacy';
+    } else if (houseResult === 11) {
+      houseResult = 11;
+      houseText = 'Interconnectedness';
+    } else if (houseResult === 12) {
+      houseResult = 12;
+      houseText = 'Karmic Cycles';
+    }
     setHouseDie(houseResult);
+    setHouseHoroscope(houseText);
   }
 
   function handleRollDice() {
@@ -126,7 +166,7 @@ function App() {
       </section>
       <section className="horoscope-template">
         <h3>{question}</h3>
-        <p>{planetHoroscope} {zodiacHoroscope}</p>
+        <p>{planetHoroscope} {zodiacHoroscope} {houseHoroscope}</p>
         
       </section>
       <button>Reset</button>
