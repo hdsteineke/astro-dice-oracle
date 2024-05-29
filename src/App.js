@@ -7,6 +7,7 @@ function App() {
   const [planetDie, setPlanetDie] = useState('♂');
   const [planetHoroscope, setPlanetHoroscope] = useState('');
   const [zodiacDie, setZodiacDie] = useState('♈︎');
+  const [zodiacHoroscope, setZodiacHoroscope] = useState('');
   const [houseDie, setHouseDie] = useState(1);
 
 
@@ -55,32 +56,46 @@ function App() {
   }
   function handleZodiacDie() {
     let zodiacResult = Math.ceil(Math.random() * 12);
+    let zodiacText =''
     if (zodiacResult === 1) {
-      zodiacResult = '♈︎'
+      zodiacResult = '♈︎';
+      zodiacText = 'Empowerment';
     } else if (zodiacResult === 2) {
-      zodiacResult = '♉︎'
+      zodiacResult = '♉︎';
+      zodiacText = 'Investment';
     } else if (zodiacResult === 3) {
-      zodiacResult = '♊︎'
+      zodiacResult = '♊︎';
+      zodiacText = 'Curiosity';
     } else if (zodiacResult === 4) {
-      zodiacResult = '♋︎'
+      zodiacResult = '♋︎';
+      zodiacText = 'Care';
     } else if (zodiacResult === 5) {
-      zodiacResult = '♌︎'
+      zodiacResult = '♌︎';
+      zodiacText = 'Expression';
     } else if (zodiacResult === 6) {
-      zodiacResult = '♍︎'
+      zodiacResult = '♍︎';
+      zodiacText = 'Refinement';
     } else if (zodiacResult === 7) {
-      zodiacResult = '♎︎'
+      zodiacResult = '♎︎';
+      zodiacText = 'Collaboration';
     } else if (zodiacResult === 8) {
-      zodiacResult = '♏︎'
+      zodiacResult = '♏︎';
+      zodiacText = 'Loyalty';
     } else if (zodiacResult === 9) {
-      zodiacResult = '♐︎'
+      zodiacResult = '♐︎';
+      zodiacText = 'Quest';
     } else if (zodiacResult === 10) {
-      zodiacResult = '♑︎'
+      zodiacResult = '♑︎';
+      zodiacText = 'Mastery';
     } else if (zodiacResult === 11) {
-      zodiacResult = '♒︎'
+      zodiacResult = '♒︎';
+      zodiacText = 'Networking';
     } else if (zodiacResult === 12) {
-      zodiacResult = '♓︎'
+      zodiacResult = '♓︎';
+      zodiacText = 'Healing';
     }
     setZodiacDie(zodiacResult);
+    setZodiacHoroscope(zodiacText);
   }
 
   function handleHouseDie() {
@@ -110,7 +125,7 @@ function App() {
       </section>
       <section className="horoscope-template">
         <h3>{question}</h3>
-        <p>{planetHoroscope}</p>
+        <p>{planetHoroscope}{zodiacHoroscope}</p>
         
       </section>
       <button>Reset</button>
