@@ -9,6 +9,7 @@ function App() {
   const [zodiacDie, setZodiacDie] = useState('♈︎');
   const [zodiacHoroscope, setZodiacHoroscope] = useState('');
   const [houseDie, setHouseDie] = useState(1);
+  // const [horoscope, setHoroscope] = useState('');
 
 
   function handlePlanetDie() {
@@ -125,7 +126,7 @@ function App() {
       </section>
       <section className="horoscope-template">
         <h3>{question}</h3>
-        <p>{planetHoroscope}{zodiacHoroscope}</p>
+        <p>{planetHoroscope} {zodiacHoroscope}</p>
         
       </section>
       <button>Reset</button>
