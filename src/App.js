@@ -149,6 +149,12 @@ function App() {
     handleZodiacDie();
     handleHouseDie();
   }
+
+  function saveHoroscope() {
+
+  }
+
+
   return (
     <div className="App">
       <h1>Consult the Oracle:</h1>
@@ -157,19 +163,30 @@ function App() {
           Ask a question: 
         </label>
         <input value={question} onChange={e => setQuestion(e.target.value)}></input>
+
+        
         <div className="dice-container">
           <div className="zodiac-dice">{planetDie}</div>
           <div className="zodiac-dice">{zodiacDie}</div>
           <div className="zodiac-dice">{houseDie}</div>
         </div>
-         <button onClick={() => handleRollDice()}>Roll the dice</button>
+        <button onClick={() => handleRollDice()}>Roll the dice</button>
       </section>
+
       <section className="horoscope-template">
         <h3>{question}</h3>
         <p>{planetHoroscope} {zodiacHoroscope} {houseHoroscope}</p>
         
       </section>
+      <button onClick={() => saveHoroscope()}>Save to Journal</button>
       <button>Reset</button>
+
+      <section className="horoscope-journal">
+        Saved Horoscopes Here
+        <div className="horoscope-template">Horoscopes</div>
+        <div className="horoscope-template">Horoscopes</div>
+        <div className="horoscope-template">Horoscopes</div>
+      </section>
     </div>
   );
 }
