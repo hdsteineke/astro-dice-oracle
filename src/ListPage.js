@@ -16,7 +16,7 @@ export default function ListPage() {
   }, []);
 
   return (
-    <div>THIS IS A LIST PAGE!!!
+    <div>
       {horoscopeCollection.map(horoscope => 
         <HoroscopeComponent key={horoscope.dice} horoscope={horoscope} />
       )}

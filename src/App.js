@@ -1,7 +1,5 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-// import PlanetDie from './Dice/PlanetDie';
-import { getHoroscopes } from './services/fetch-utils';
 import ListPage from './ListPage';
 
 
@@ -13,21 +11,6 @@ function App() {
   const [zodiacHoroscope, setZodiacHoroscope] = useState('');
   const [houseDie, setHouseDie] = useState(1);
   const [houseHoroscope, setHouseHoroscope] = useState('');
-  // const [horoscopeCollection, setHoroscopeCollection] = useState([]);
-
-
-  // useEffect(() => {
-  //   async function fetch() {
-  //     const horoscopeData = await getHoroscopes();
-
-  //     setHoroscopeCollection(horoscopeData);
-  //   }
-  //   fetch();
-
-    
-  // }, []);
-
-  // fetch()
 
 
   function handlePlanetDie() {
@@ -200,7 +183,7 @@ function App() {
 
       <section className="horoscope-journal">
         Saved Horoscopes Here
-        <div className="horoscope-template"><ListPage /></div>
+        <ListPage />
         <div className="horoscope-template">Horoscopes</div>
       </section>
     </div>
