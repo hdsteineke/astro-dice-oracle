@@ -1,6 +1,9 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import PlanetDie from './Dice/PlanetDie';
+// import PlanetDie from './Dice/PlanetDie';
+import { getHoroscopes } from './services/fetch-utils';
+import ListPage from './ListPage';
+
 
 function App() {
   const [question, setQuestion] = useState('');
@@ -10,7 +13,21 @@ function App() {
   const [zodiacHoroscope, setZodiacHoroscope] = useState('');
   const [houseDie, setHouseDie] = useState(1);
   const [houseHoroscope, setHouseHoroscope] = useState('');
-  // const [horoscope, setHoroscope] = useState('');
+  // const [horoscopeCollection, setHoroscopeCollection] = useState([]);
+
+
+  // useEffect(() => {
+  //   async function fetch() {
+  //     const horoscopeData = await getHoroscopes();
+
+  //     setHoroscopeCollection(horoscopeData);
+  //   }
+  //   fetch();
+
+    
+  // }, []);
+
+  // fetch()
 
 
   function handlePlanetDie() {
@@ -150,9 +167,9 @@ function App() {
     handleHouseDie();
   }
 
-  function saveHoroscope() {
+  // function saveHoroscope() {
 
-  }
+  // }
 
 
   return (
@@ -178,13 +195,12 @@ function App() {
         <p>{planetHoroscope} {zodiacHoroscope} {houseHoroscope}</p>
         
       </section>
-      <button onClick={() => saveHoroscope()}>Save to Journal</button>
+      <button>Save to Journal</button>
       <button>Reset</button>
 
       <section className="horoscope-journal">
         Saved Horoscopes Here
-        <div className="horoscope-template">Horoscopes</div>
-        <div className="horoscope-template">Horoscopes</div>
+        <div className="horoscope-template"><ListPage /></div>
         <div className="horoscope-template">Horoscopes</div>
       </section>
     </div>

@@ -72,3 +72,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ///////////////////////////////////////////////////////
 
 ![oracle wireframe](/public/wireframe.PNG "wireframe")
+
+
+///////////////////////////////////////////////////////
+
+
+7/24/2024
+
+- My first goal today is to see if I can successfully fetch a horoscope object from supabase to display in the saved horoscopes section
+
+
+8/7/2024
+
+- Successfully fetch horoscope data from Supabase
+- successfully create horoscope data from app webpage
+
+
+- As much as I thought I could get away with coding in my App.js just to get some momentum, I am quickly realizing the error of my ways and remember why components and architecture are so fundamentally important to working code... blahh
