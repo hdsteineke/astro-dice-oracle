@@ -18,7 +18,7 @@ export default function ListPage() {
   return (
     <div>
       {horoscopeCollection.map(horoscope => 
-        <HoroscopeComponent key={horoscope.dice} horoscope={horoscope} />
+        <HoroscopeComponent key={horoscope.created_at} horoscope={horoscope} />
       )}
     </div>
   );
