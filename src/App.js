@@ -1,6 +1,8 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+// import { useHistory } from 'react-router-dom';
 import ListPage from './ListPage';
+import { createHoroscope } from './services/fetch-utils';
 
 
 function App() {
@@ -11,6 +13,29 @@ function App() {
   const [zodiacHoroscope, setZodiacHoroscope] = useState('');
   const [houseDie, setHouseDie] = useState(1);
   const [houseHoroscope, setHouseHoroscope] = useState('');
+
+  // const [timestamp, setTimestamp] = useState('');
+  // const history = useHistory();
+  const concatenatedDice = planetDie + ' ' + zodiacDie + ' ' + houseDie
+  const concatenatedHoroscope = planetHoroscope + ' ' + zodiacHoroscope + ' ' + houseHoroscope
+
+
+
+  async function handleSaveHoroscope(e) {
+    e.preventDefault();
+
+    await createHoroscope({
+      // created_at: timestamp,
+      question,
+      horoscope: concatenatedHoroscope,
+      dice: concatenatedDice
+    });
+    
+    console.log('question', question);
+    // history.push('/');
+
+  }
+
 
 
   function handlePlanetDie() {
@@ -56,6 +81,8 @@ function App() {
     setPlanetDie(planetResult);
     setPlanetHoroscope(planetText);
   }
+
+
   function handleZodiacDie() {
     let zodiacResult = Math.ceil(Math.random() * 12);
     let zodiacText =''
@@ -150,10 +177,6 @@ function App() {
     handleHouseDie();
   }
 
-  // function saveHoroscope() {
-
-  // }
-
 
   return (
     <div className="App">
@@ -175,10 +198,11 @@ function App() {
 
       <section className="horoscope-template">
         <h3>{question}</h3>
-        <p>{planetHoroscope} {zodiacHoroscope} {houseHoroscope}</p>
+        <p>{concatenatedHoroscope}</p>
+        {/* <p>{planetHoroscope} {zodiacHoroscope} {houseHoroscope}</p> */}
         
       </section>
-      <button>Save to Journal</button>
+      <button onClick={handleSaveHoroscope}>Save to Journal</button>
       <button>Reset</button>
 
       <section className="horoscope-journal">
