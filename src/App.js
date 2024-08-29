@@ -33,6 +33,7 @@ function App() {
     
     console.log('question', question);
     // history.push('/');
+    window.location.reload();
 
   }
 
