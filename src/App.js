@@ -197,7 +197,7 @@ function App() {
         <button onClick={() => handleRollDice()}>Roll the dice</button>
       </section>
 
-      <section className="horoscope-template">
+      <section className="horoscope-draft">
         <h3>{question}</h3>
         <p>{concatenatedHoroscope}</p>
         {/* <p>{planetHoroscope} {zodiacHoroscope} {houseHoroscope}</p> */}
@@ -206,10 +206,8 @@ function App() {
       <button onClick={handleSaveHoroscope}>Save to Journal</button>
       <button>Reset</button>
 
-      <section className="horoscope-journal">
-        Saved Horoscopes Here
+      <section>
         <ListPage />
-        <div className="horoscope-template">Horoscopes</div>
       </section>
     </div>
   );

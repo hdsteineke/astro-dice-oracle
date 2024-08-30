@@ -89,3 +89,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 - As much as I thought I could get away with coding in my App.js just to get some momentum, I am quickly realizing the error of my ways and remember why components and architecture are so fundamentally important to working code... blahh
+
+
+
+8/29/24
+I think my goal today is to style my app a little bit to get it feeling closer to my vision. I want to:
+1) format the containers holding the horoscopes 
+2) give the webpage a little color
