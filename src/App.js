@@ -190,9 +190,9 @@ function App() {
 
         
         <div className="dice-container">
-          <div className="zodiac-dice">{planetDie}</div>
-          <div className="zodiac-dice">{zodiacDie}</div>
-          <div className="zodiac-dice">{houseDie}</div>
+          <div className="zodiac-dice"><h3>{planetDie}</h3></div>
+          <div className="zodiac-dice"><h3>{zodiacDie}</h3></div>
+          <div className="zodiac-dice"><h3>{houseDie}</h3></div>
         </div>
         <button onClick={() => handleRollDice()}>Roll the dice</button>
       </section>

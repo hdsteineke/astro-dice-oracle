@@ -47,7 +47,8 @@
 
 .zodiac-dice {
   border: solid black 1px;
-  padding: 20px;
+  width: 50px;
+  padding: 10px;
   margin: 20px;
 }
 
