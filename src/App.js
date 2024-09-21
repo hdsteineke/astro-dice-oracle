@@ -199,6 +199,7 @@ function App() {
 
       <section className="horoscope-draft">
         <h3>{question}</h3>
+        <h3>{planetDie} {zodiacDie} {houseDie}</h3>
         <p>{concatenatedHoroscope}</p>
         {/* <p>{planetHoroscope} {zodiacHoroscope} {houseHoroscope}</p> */}
         

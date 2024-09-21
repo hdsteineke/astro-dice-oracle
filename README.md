@@ -96,3 +96,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 I think my goal today is to style my app a little bit to get it feeling closer to my vision. I want to:
 1) format the containers holding the horoscopes 
 2) give the webpage a little color
+
+I didn't get to color yet; I think I'll wait until I have the structure I want before I start down that rabbit hole of styling
+
+9/4/24
+Today I would like to work on setting up another route where I can designate the saved horoscopes, so that they are not all on the landing page. Then we'll go from there.
