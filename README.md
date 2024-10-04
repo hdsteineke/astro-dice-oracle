@@ -101,3 +101,10 @@ I didn't get to color yet; I think I'll wait until I have the structure I want b
 
 9/4/24
 Today I would like to work on setting up another route where I can designate the saved horoscopes, so that they are not all on the landing page. Then we'll go from there.
+
+9/25/24
+Today my goals are to:
+1) keep fortune template clear until dice have been rolled
+2) clear horocope template upon saving to journal
+3) make horoscopes editable, updatable, and deletable
+

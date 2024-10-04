@@ -88,6 +88,12 @@
   padding: 15px;
 }
 
-.glyph-style {
-  
+.hidden-button{
+  display: none;
+  justify-content: center;
+
+}
+
+.horoscope-template:hover .hidden-button {
+  display: block;
 }
