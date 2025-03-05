@@ -1,6 +1,8 @@
 .App {
   grid-template-columns: 1fr 1fr;
   text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .App-logo {
@@ -80,10 +82,15 @@
   padding: 15px;
 }
 
+
+/* .horoscope-journal-container {
+  display: grid;
+  grid-template-columns: 1 1 1;
+} */
+
 .horoscope-journal {
   display: flex;
   flex-wrap: wrap;
   border: solid black 1px;
-  margin: 10px;
   padding: 15px;
 }

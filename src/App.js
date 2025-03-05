@@ -206,7 +206,7 @@ function App() {
       <button onClick={handleSaveHoroscope}>Save to Journal</button>
       <button>Reset</button>
 
-      <section>
+      <section className="horoscope-journal-container">
         <ListPage />
       </section>
     </div>
