@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // import { useHistory } from 'react-router-dom';
 import ListPage from './ListPage';
 import { createHoroscope } from './services/fetch-utils';
