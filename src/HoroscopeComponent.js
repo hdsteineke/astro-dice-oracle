@@ -7,6 +7,7 @@ export default function HoroscopeComponent({ horoscope }) {
       <p>{horoscope.question}</p>
       <h3>{horoscope.dice}</h3>
       <p>{horoscope.horoscope}</p>
+      <button class="hidden-button">Edit Horoscope</button>
     </div>
   )
 }

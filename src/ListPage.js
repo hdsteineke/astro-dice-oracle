@@ -16,7 +16,7 @@ export default function ListPage() {
   }, []);
 
   return (
-    <div>
+    <div className="horoscope-journal">
       {horoscopeCollection.map(horoscope => 
         <HoroscopeComponent key={horoscope.created_at} horoscope={horoscope} />
       )}
