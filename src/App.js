@@ -178,6 +178,10 @@ function App() {
     handleHouseDie();
   }
 
+  function refreshPage() {
+    window.location.reload();
+  }
+
 
   return (
     <div className="App">
@@ -205,7 +209,7 @@ function App() {
         
       </section>
       <button onClick={handleSaveHoroscope}>Save to Journal</button>
-      <button>Reset</button>
+      <button onClick={refreshPage}>Reset</button>
 
       <section>
         <ListPage />
