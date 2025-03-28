@@ -16,3 +16,22 @@ export async function getHoroscopes() {
 
   return checkError(response);
 }
+
+export async function getHoroscopeById(id) {
+  const response = await client
+    .from('horoscopes')
+    .select('*, question(*), horoscope(*), dice(*)')
+    .match({ id: id })
+    .single();
+
+  return checkError(response);
+}
+
+export async function deleteHoroscope(id) {
+  const response = await client
+    .from('horoscopes')
+    .delete()
+    .match({ id: id });
+
+    return checkError(response);
+}
